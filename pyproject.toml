@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "russian-labor-market-analysis"
-version = "0.1.0"
+version = "1.0.0"
 description = "Reproducible analysis of Russian labor-force survey data for 2010-2023"
 readme = "README.md"
 requires-python = ">=3.11"
