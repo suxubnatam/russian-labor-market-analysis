@@ -12,6 +12,7 @@ def test_harmonizes_uppercase_schema_and_filters_age(source_frame: pd.DataFrame)
     assert len(result) == 3
     assert result["region"].tolist() == [45, 3, 11]
     assert result["gender"].tolist() == ["male", "female", "male"]
+    assert result["settlement_type"].tolist() == ["urban", "rural", "urban"]
     assert result["labor_force_status"].tolist() == [
         "employed",
         "unemployed",

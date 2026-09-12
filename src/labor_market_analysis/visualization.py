@@ -9,6 +9,13 @@ matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 import pandas as pd
 
+CATEGORY_LABELS = {
+    "male": "Мужчины",
+    "female": "Женщины",
+    "urban": "Город",
+    "rural": "Село",
+}
+
 
 def _finish_figure(path: Path) -> Path:
     path.parent.mkdir(parents=True, exist_ok=True)
@@ -63,9 +70,12 @@ def plot_latest_comparison(
     latest_year = int(table["year"].max())
     latest = table[table["year"] == latest_year].dropna(subset=[category, metric]).copy()
     latest = latest.sort_values(metric, ascending=False).head(max_categories)
+    if latest.empty:
+        raise ValueError(f"No observations available for comparison by {category!r}")
+    labels = latest[category].astype(str).replace(CATEGORY_LABELS)
 
     plt.figure(figsize=(10, max(4.5, len(latest) * 0.38)))
-    plt.barh(latest[category].astype(str), latest[metric], color="#D9782D")
+    plt.barh(labels, latest[metric], color="#D9782D")
     plt.gca().invert_yaxis()
     plt.title(f"{title}, {latest_year}")
     plt.xlabel("Доля, %")

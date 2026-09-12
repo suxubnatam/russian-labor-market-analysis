@@ -13,7 +13,7 @@ def source_frame() -> pd.DataFrame:
             "VESA": [3.0, 1.0, 100.0, 2.0],
             "VESA_KVART": [3.0, 1.0, 100.0, 2.0],
             "VESA_OB": [3.0, 1.0, 100.0, 2.0],
-            "POSSEL": [1, 2, 1, 1],
+            "POSEL": [1, 2, 1, 1],
             "NAS_POL": [1, 2, 1, 2],
             "NAS_VOZR": [30, 22, 50, 14],
             "STRUKTAK": [1, 2, 3, 1],

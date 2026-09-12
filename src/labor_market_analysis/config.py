@@ -44,6 +44,7 @@ COLUMN_ALIASES = {
     "vesa_kvart": "ves_kvart",
     "ves_kvart": "ves_kvart",
     "vesa_ob": "vesa_ob",
+    "posel": "settlement_type",
     "possel": "settlement_type",
     "nas_pol": "gender",
     "nas_vozr": "age",
@@ -67,6 +68,8 @@ CRITICAL_COLUMNS = {
     "vesa_ob",
     "gender",
     "age",
+    "region",
+    "settlement_type",
     "labor_force_status",
     "informal_employment",
 }

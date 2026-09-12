@@ -17,7 +17,7 @@ def _write_source(path: Path) -> None:
             "VESA": [2.0, 1.0, 1.0],
             "VESA_KVART": [2.0, 1.0, 1.0],
             "VESA_OB": [2.0, 1.0, 1.0],
-            "POSSEL": [1, 1, 2],
+            "POSEL": [1, 1, 2],
             "NAS_POL": [1, 2, 2],
             "NAS_VOZR": [30, 31, 22],
             "STRUKTAK": [1, 2, 1],
